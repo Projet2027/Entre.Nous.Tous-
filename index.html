@@ -52,6 +52,19 @@
             font-weight: bold;
             border-radius: 4px;
         }
+
+        /* Bouton administrateur (optionnel) */
+        .admin-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
@@ -59,6 +72,9 @@
 
     <div class="hero">
         <div class="overlay"></div>
+
+        <!-- Bouton admin visible uniquement pour toi -->
+        <a class="admin-btn" href="admin.html">Administrateur</a>
 
         <div class="content">
             <h1>Entre.Nous.Tous</h1>
