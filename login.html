@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre.Nous.Tous — Connexion</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #ff4da6;
+            text-shadow: 0 0 15px #ff4da6;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #ff8c42;
+            text-shadow: 0 0 15px #ff8c42;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #ffd27f;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #ff4da6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff4da6;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 20px #ff4da6;
+        }
+
+        .link {
+            margin-top: 20px;
+            color: #ffd27f;
+            font-size: 0.9rem;
+        }
+
+        .link a {
+            color: #ff8c42;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1>Connexion <span>Membre</span></h1>
+
+        <label>Email</label>
+        <input type="email" placeholder="Votre email">
+
+        <label>Mot de passe</label>
+        <input type="password" placeholder="Votre mot de passe">
+
+        <a href="profil.html" class="btn">Se connecter</a>
+
+        <div class="link">
+            Pas encore membre ?  
+            <a href="adhesion.html">Demander une adhésion</a>
+        </div>
+    </div>
+
+</body>
+</html>
