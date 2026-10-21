@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre.Nous.Tous — Administration</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #ff4da6;
+            text-shadow: 0 0 15px #ff4da6;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #ff8c42;
+            text-shadow: 0 0 15px #ff8c42;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section h2 {
+            color: #ff8c42;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #ff8c42;
+        }
+
+        .request, .event {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: 10px;
+            background: #ff4da6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff4da6;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 20px #ff4da6;
+        }
+
+        .btn-secondary {
+            background: #ff8c42;
+            box-shadow: 0 0 10px #ff8c42;
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 0 20px #ff8c42;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: #fff;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Espace <span>Admin</span></h1>
+
+    <!-- Demandes d'adhésion -->
+    <div class="section">
+        <h2>Demandes d’adhésion</h2>
+
+        <div class="request">
+            <p><strong>Nom :</strong> Candidat A</p>
+            <p><strong>Âge :</strong> 29 ans</p>
+            <p><strong>Type :</strong> Solo</p>
+            <p><strong>Style :</strong> Élégant, calme</p>
+            <a href="#" class="btn">Valider</a>
+            <a href="#" class="btn-secondary">Refuser</a>
+        </div>
+
+        <div class="request">
+            <p><strong>Nom :</strong> Couple B</p>
+            <p><strong>Âge :</strong> 32 & 30 ans</p>
+            <p><strong>Type :</strong> Couple</p>
+            <p><strong>Style :</strong> Dynamique, sociable</p>
+            <a href="#" class="btn">Valider</a>
+            <a href="#" class="btn-secondary">Refuser</a>
+        </div>
+    </div>
+
+    <!-- Ajouter un événement -->
+    <div class="section">
+        <h2>Ajouter un événement</h2>
+
+        <label>Titre</label>
+        <input type="text" placeholder="Ex : Soirée Sélective">
+
+        <label>Date</label>
+        <input type="text" placeholder="Ex : Vendredi 15 Novembre">
+
+        <label>Description</label>
+        <textarea placeholder="Décrivez l’événement..."></textarea>
+
+        <a href="#" class="btn">Ajouter</a>
+    </div>
+
+    <!-- Liste des événements -->
+    <div class="section">
+        <h2>Événements existants</h2>
+
+        <div class="event">
+            <p><strong>Soirée — Nuit Sélective</strong></p>
+            <p>Vendredi 15 Novembre</p>
+            <a href="#" class="btn-secondary">Supprimer</a>
+        </div>
+
+        <div class="event">
+            <p><strong>Week-end — Immersion Privée</strong></p>
+            <p>22–24 Novembre</p>
+            <a href="#" class="btn-secondary">Supprimer</a>
+        </div>
+    </div>
+
+</body>
+</html>
