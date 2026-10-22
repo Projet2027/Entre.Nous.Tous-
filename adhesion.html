@@ -1,76 +1,64 @@
-<h2>Type de profil</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhésion – Entre.Nous.Tous</title>
 
-<label>
-    <input type="radio" name="type" value="femme" onclick="showForm('femme')">
-    Femme
-</label>
+    <style>
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
 
-<label>
-    <input type="radio" name="type" value="homme" onclick="showForm('homme')">
-    Homme
-</label>
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
 
-<label>
-    <input type="radio" name="type" value="couple" onclick="showForm('couple')">
-    Couple
-</label>
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-<hr>
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
 
-<!-- FORMULAIRE FEMME -->
-<div id="form-femme" style="display:none;">
-    <h3>Profil Femme</h3>
-    <input type="file" required>
-    <input type="number" placeholder="Âge">
-    <input type="text" placeholder="Morphologie">
-    <input type="text" placeholder="Style / personnalité">
-    <textarea placeholder="Présentation"></textarea>
-    <textarea placeholder="Limites"></textarea>
-    <textarea placeholder="Préférences"></textarea>
-</div>
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: none;
+        }
 
-<!-- FORMULAIRE HOMME -->
-<div id="form-homme" style="display:none;">
-    <h3>Profil Homme</h3>
-    <input type="file" required>
-    <input type="number" placeholder="Âge">
-    <input type="text" placeholder="Morphologie">
-    <input type="text" placeholder="Style / personnalité">
-    <textarea placeholder="Présentation"></textarea>
-    <textarea placeholder="Limites"></textarea>
-    <textarea placeholder="Préférences"></textarea>
-</div>
+        textarea {
+            height: 80px;
+        }
 
-<!-- FORMULAIRE COUPLE -->
-<div id="form-couple" style="display:none;">
-    <h3>Profil Couple</h3>
-    <input type="file" required>
+        .section {
+            margin-top: 25px;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
 
-    <h4>Profil Femme</h4>
-    <input type="number" placeholder="Âge">
-    <input type="text" placeholder="Morphologie">
-    <input type="text" placeholder="Style / personnalité">
-    <textarea placeholder="Présentation"></textarea>
-
-    <h4>Profil Homme</h4>
-    <input type="number" placeholder="Âge">
-    <input type="text" placeholder="Morphologie">
-    <input type="text" placeholder="Style / personnalité">
-    <textarea placeholder="Présentation"></textarea>
-
-    <h4>Limites du couple</h4>
-    <textarea></textarea>
-
-    <h4>Préférences du couple</h4>
-    <textarea></textarea>
-</div>
-
-<script>
-function showForm(type) {
-    document.getElementById('form-femme').style.display = 'none';
-    document.getElementById('form-homme').style.display = 'none';
-    document.getElementById('form-couple').style.display = 'none';
-
-    document.getElementById('form-' + type).style.display = 'block';
-}
-</script>
+        .submit-btn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            width
