@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier membre – EntreNousTous</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 15px #ff4da6, 0 0 25px #ff7b00;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
+        }
+
+        h2 {
+            text-shadow: 0 0 10px #ff7b00;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: none;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        textarea {
+            height: 90px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 25px;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 25px rgba(255,77,166,0.8);
+        }
+
+        .btn-retour {
+            background: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Modifier le membre</h1>
+    </div>
+
+    <div class="container">
+
+        <h2>Informations du membre</h2>
+
+        <!-- Exemple de membre (à remplacer plus tard par des données réelles) -->
+
+        <label>Âge
+            <input type="number" value="28">
+        </label>
+
+        <label>Morphologie
+            <input type="text" value="Fine">
+        </label>
+
+        <label>Style / personnalité
+            <input type="text" value="Sensuelle, élégante">
+        </label>
+
+        <label>Présentation
+            <textarea>Je souhaite rejoindre un cercle discret et raffiné.</textarea>
+        </label>
+
+        <label>Limites
+            <textarea>Respect strict</textarea>
+        </label>
+
+        <label>Préférences
+            <textarea>Couples, soirées privées</textarea>
+        </label>
+
+        <label>Compte Wyylde (pseudo ou lien)
+            <input type="text" value="wyylde.com/membre/exemple">
+        </label>
+
+        <a class="btn" href="admin-membre-view.html">Enregistrer les modifications</a>
+        <br><br>
+        <a class="btn btn-retour" href="admin-membres.html">Retour</a>
+
+    </div>
+
+</body>
+</html>
 
