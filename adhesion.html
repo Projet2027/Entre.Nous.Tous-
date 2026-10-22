@@ -1,6 +1,218 @@
-body {
-    margin: 0;
-    background: radial-gradient(circle at top, #ff4da6 0%, #0a0a0a 60%);
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhésion – Entre.Nous.Tous</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 3rem;
+            text-shadow: 0 0 15px #ff4da6;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 40px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: none;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        textarea {
+            height: 90px;
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(20,20,20,0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,77,166,0.2);
+        }
+
+        .submit-btn {
+            margin-top: 25px;
+            padding: 15px;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 0 25px rgba(255,77,166,0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Adhésion</h1>
+
+    <div class="container">
+
+        <h2 style="text-shadow:0 0 10px #ff7b00;">Type de profil</h2>
+
+        <label><input type="radio" name="type" value="femme" onclick="showForm('femme')"> Femme</label>
+        <label><input type="radio" name="type" value="homme" onclick="showForm('homme')"> Homme</label>
+        <label><input type="radio" name="type" value="couple" onclick="showForm('couple')"> Couple</label>
+
+        <hr>
+
+        <!-- FORMULAIRE FEMME -->
+        <div id="form-femme" class="section" style="display:none;">
+            <h3 style="color:#ff4da6;">Profil Femme</h3>
+
+            <label>Photo (obligatoire)
+                <input type="file" required>
+            </label>
+
+            <label>Âge
+                <input type="number">
+            </label>
+
+            <label>Morphologie
+                <input type="text">
+            </label>
+
+            <label>Style / personnalité
+                <input type="text">
+            </label>
+
+            <label>Présentation
+                <textarea></textarea>
+            </label>
+
+            <label>Limites
+                <textarea></textarea>
+            </label>
+
+            <label>Préférences
+                <textarea></textarea>
+            </label>
+        </div>
+
+        <!-- FORMULAIRE HOMME -->
+        <div id="form-homme" class="section" style="display:none;">
+            <h3 style="color:#ff4da6;">Profil Homme</h3>
+
+            <label>Photo (obligatoire)
+                <input type="file" required>
+            </label>
+
+            <label>Âge
+                <input type="number">
+            </label>
+
+            <label>Morphologie
+                <input type="text">
+            </label>
+
+            <label>Style / personnalité
+                <input type="text">
+            </label>
+
+            <label>Présentation
+                <textarea></textarea>
+            </label>
+
+            <label>Limites
+                <textarea></textarea>
+            </label>
+
+            <label>Préférences
+                <textarea></textarea>
+            </label>
+        </div>
+
+        <!-- FORMULAIRE COUPLE -->
+        <div id="form-couple" class="section" style="display:none;">
+            <h3 style="color:#ff7b00;">Profil Couple</h3>
+
+            <label>Photo du couple (obligatoire)
+                <input type="file" required>
+            </label>
+
+            <h4 style="color:#ff4da6;">Profil Femme</h4>
+            <label>Âge
+                <input type="number">
+            </label>
+            <label>Morphologie
+                <input type="text">
+            </label>
+            <label>Style / personnalité
+                <input type="text">
+            </label>
+            <label>Présentation
+                <textarea></textarea>
+            </label>
+
+            <h4 style="color:#ff7b00;">Profil Homme</h4>
+            <label>Âge
+                <input type="number">
+            </label>
+            <label>Morphologie
+                <input type="text">
+            </label>
+            <label>Style / personnalité
+                <input type="text">
+            </label>
+            <label>Présentation
+                <textarea></textarea>
+            </label>
+
+            <h4 style="color:#ff4da6;">Limites du couple</h4>
+            <textarea></textarea>
+
+            <h4 style="color:#ff7b00;">Préférences du couple</h4>
+            <textarea></textarea>
+        </div>
+
+        <button class="submit-btn">Envoyer la demande</button>
+
+    </div>
+
+    <script>
+        function showForm(type) {
+            document.getElementById('form-femme').style.display = 'none';
+            document.getElementById('form-homme').style.display = 'none';
+            document.getElementById('form-couple').style.display = 'none';
+
+            document.getElementById('form-' + type).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
