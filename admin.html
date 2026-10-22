@@ -36,6 +36,7 @@
 
         h2 {
             text-shadow: 0 0 10px #ff7b00;
+            margin-bottom: 15px;
         }
 
         .btn {
@@ -55,18 +56,30 @@
         .btn:hover {
             box-shadow: 0 0 25px rgba(255,77,166,0.8);
         }
+
+        .logout {
+            background: #444;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- PROTECTION ADMIN -->
+    <script>
+        if (localStorage.getItem("admin") !== "true") {
+            window.location.href = "admin-login.html";
+        }
+    </script>
+
     <div class="header">
-        <h1>Administration</h1>
+        <h1>Espace Administrateur</h1>
     </div>
 
     <div class="admin-box">
 
-        <h2>Gestion des adhésions</h2>
+        <h2>Gestion des demandes</h2>
         <a class="btn" href="admin-demandes.html">Voir les demandes</a>
 
         <h2>Gestion des membres</h2>
@@ -78,7 +91,13 @@
         <h2>Gestion du site</h2>
         <a class="btn" href="admin-site.html">Modifier le site</a>
 
+        <h2>Déconnexion</h2>
+        <a class="btn logout" href="#" onclick="localStorage.removeItem('admin'); window.location.href='admin-login.html';">
+            Se déconnecter
+        </a>
+
     </div>
 
 </body>
 </html>
+
