@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil membre – EntreNousTous</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 15px #ff4da6, 0 0 25px #ff7b00;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
+        }
+
+        h2 {
+            text-shadow: 0 0 10px #ff7b00;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 5px 0 0;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 25px rgba(255,77,166,0.8);
+        }
+
+        .btn-modif {
+            background: #ffaa00;
+        }
+
+        .btn-suppr {
+            background: #660000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Profil du membre</h1>
+    </div>
+
+    <div class="container">
+
+        <h2>Informations du membre</h2>
+
+        <!-- Exemple de profil (à remplacer plus tard par des données réelles) -->
+        <div class="info"><strong>Type :</strong> Femme</div>
+        <div class="info"><strong>Âge :</strong> 28 ans</div>
+        <div class="info"><strong>Morphologie :</strong> Fine</div>
+        <div class="info"><strong>Style :</strong> Sensuelle, élégante</div>
+        <div class="info"><strong>Présentation :</strong> “Je souhaite rejoindre un cercle discret et raffiné.”</div>
+        <div class="info"><strong>Limites :</strong> Respect strict</div>
+        <div class="info"><strong>Préférences :</strong> Couples, soirées privées</div>
+        <div class="info"><strong>Compte Wyylde :</strong> wyylde.com/membre/exemple</div>
+
+        <a class="btn btn-modif" href="admin-membre-modifier.html">Modifier le membre</a>
+        <a class="btn btn-suppr" href="admin-membre-supprimer.html">Supprimer le membre</a>
+
+        <br><br>
+        <a class="btn" href="admin-membres.html">Retour à la liste des membres</a>
+
+    </div>
+
+</body>
+</html>
