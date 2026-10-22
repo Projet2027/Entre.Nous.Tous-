@@ -3,87 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre.Nous.Tous – Accueil</title>
+    <title>Entre.Nous.Tous – Sommaire</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #111;
+            background: #0a0a0a;
             color: #fff;
         }
 
-        .hero {
-            height: 100vh;
-            background: url('hero.jpg') center/cover no-repeat;
-            position: relative;
-        }
-
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.55);
-        }
-
-        .content {
-            position: absolute;
-            bottom: 10%;
-            left: 10%;
-        }
-
         h1 {
-            font-size: 3.5rem;
-            margin: 0;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 3rem;
         }
 
-        p {
-            font-size: 1.2rem;
-            max-width: 400px;
-            margin-top: 10px;
+        .sommaire {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #111;
+            border-radius: 10px;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
+        .sommaire a {
+            display: block;
+            padding: 12px 20px;
+            margin: 10px 0;
             background: #fff;
             color: #000;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
-        /* Bouton administrateur (optionnel) */
-        .admin-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
+        .sommaire a:hover {
             background: #ffcc00;
-            color: #000;
+        }
+
+        .admin {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .admin a {
+            color: #ffcc00;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 4px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="hero">
-        <div class="overlay"></div>
+    <h1>Sommaire du site</h1>
 
-        <!-- Bouton admin visible uniquement pour toi -->
-        <a class="admin-btn" href="admin.html">Administrateur</a>
+    <div class="sommaire">
+        <a href="concept.html">Concept</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="profil.html">Profil</a>
+        <a href="connexion.html">Connexion</a>
+    </div>
 
-        <div class="content">
-            <h1>Entre.Nous.Tous</h1>
-            <p>Cercle privé, sélectif et confidentiel.<br>
-               Rencontres choisies. Événements exclusifs.</p>
-
-            <!-- Le bouton fonctionne maintenant -->
-            <a class="btn" href="concept.html">Découvrir</a>
-        </div>
+    <div class="admin">
+        <a href="admin.html">Espace Administrateur</a>
     </div>
 
 </body>
