@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin – EntreNousTous</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 120px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
+            text-align: center;
+        }
+
+        h1 {
+            text-shadow: 0 0 15px #ff4da6;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+            border: none;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 15px;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Admin – Connexion</h1>
+
+        <input type="password" id="password" placeholder="Mot de passe admin">
+
+        <button class="btn" onclick="login()">Connexion</button>
+    </div>
+
+    <script>
+        function login() {
+            const pass = document.getElementById('password').value;
+
+            // Mot de passe admin
+            const adminPass = "EntreNousAdmin2026";
+
+            if (pass === adminPass) {
+                localStorage.setItem("admin", "true");
+                window.location.href = "admin.html";
+            } else {
+                alert("Mot de passe incorrect.");
+            }
+        }
+    </script>
+
+</body>
+</html>
