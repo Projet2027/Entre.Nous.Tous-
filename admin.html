@@ -3,150 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre.Nous.Tous — Administration</title>
+    <title>Administration – EntreNousTous</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0a0a0a;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
             color: #fff;
-            padding: 20px;
         }
 
-        h1 {
+        .header {
             text-align: center;
-            font-size: 2.8rem;
-            color: #ff4da6;
-            text-shadow: 0 0 15px #ff4da6;
-            margin-bottom: 10px;
+            padding: 40px 0 20px 0;
         }
 
-        h1 span {
-            color: #ff8c42;
-            text-shadow: 0 0 15px #ff8c42;
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 15px #ff4da6, 0 0 25px #ff7b00;
+            letter-spacing: 2px;
         }
 
-        .section {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+        .admin-box {
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 30px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
         }
 
-        .section h2 {
-            color: #ff8c42;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px #ff8c42;
-        }
-
-        .request, .event {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+        h2 {
+            text-shadow: 0 0 10px #ff7b00;
         }
 
         .btn {
-            display: inline-block;
-            padding: 8px 15px;
-            margin-top: 10px;
-            background: #ff4da6;
-            color: #fff;
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #ff4da6;
-            transition: 0.3s;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
         }
 
         .btn:hover {
-            box-shadow: 0 0 20px #ff4da6;
-        }
-
-        .btn-secondary {
-            background: #ff8c42;
-            box-shadow: 0 0 10px #ff8c42;
-        }
-
-        .btn-secondary:hover {
-            box-shadow: 0 0 20px #ff8c42;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 5px;
-            color: #fff;
-            margin-top: 10px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.8);
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Espace <span>Admin</span></h1>
-
-    <!-- Demandes d'adhésion -->
-    <div class="section">
-        <h2>Demandes d’adhésion</h2>
-
-        <div class="request">
-            <p><strong>Nom :</strong> Candidat A</p>
-            <p><strong>Âge :</strong> 29 ans</p>
-            <p><strong>Type :</strong> Solo</p>
-            <p><strong>Style :</strong> Élégant, calme</p>
-            <a href="#" class="btn">Valider</a>
-            <a href="#" class="btn-secondary">Refuser</a>
-        </div>
-
-        <div class="request">
-            <p><strong>Nom :</strong> Couple B</p>
-            <p><strong>Âge :</strong> 32 & 30 ans</p>
-            <p><strong>Type :</strong> Couple</p>
-            <p><strong>Style :</strong> Dynamique, sociable</p>
-            <a href="#" class="btn">Valider</a>
-            <a href="#" class="btn-secondary">Refuser</a>
-        </div>
+    <div class="header">
+        <h1>Administration</h1>
     </div>
 
-    <!-- Ajouter un événement -->
-    <div class="section">
-        <h2>Ajouter un événement</h2>
+    <div class="admin-box">
 
-        <label>Titre</label>
-        <input type="text" placeholder="Ex : Soirée Sélective">
+        <h2>Gestion des adhésions</h2>
+        <a class="btn" href="admin-demandes.html">Voir les demandes</a>
 
-        <label>Date</label>
-        <input type="text" placeholder="Ex : Vendredi 15 Novembre">
+        <h2>Gestion des membres</h2>
+        <a class="btn" href="admin-membres.html">Liste des membres</a>
 
-        <label>Description</label>
-        <textarea placeholder="Décrivez l’événement..."></textarea>
+        <h2>Gestion des événements</h2>
+        <a class="btn" href="admin-evenements.html">Créer / Modifier un événement</a>
 
-        <a href="#" class="btn">Ajouter</a>
-    </div>
+        <h2>Gestion du site</h2>
+        <a class="btn" href="admin-site.html">Modifier le site</a>
 
-    <!-- Liste des événements -->
-    <div class="section">
-        <h2>Événements existants</h2>
-
-        <div class="event">
-            <p><strong>Soirée — Nuit Sélective</strong></p>
-            <p>Vendredi 15 Novembre</p>
-            <a href="#" class="btn-secondary">Supprimer</a>
-        </div>
-
-        <div class="event">
-            <p><strong>Week-end — Immersion Privée</strong></p>
-            <p>22–24 Novembre</p>
-            <a href="#" class="btn-secondary">Supprimer</a>
-        </div>
     </div>
 
 </body>
