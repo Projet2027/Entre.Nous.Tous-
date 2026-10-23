@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des événements – EntreNousTous</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial, sans-serif;
+            background: radial-gradient(circle at top, #ff4da6 0%, #5a00a0 40%, #0a0a0a 80%);
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 15px #ff4da6, 0 0 25px #ff7b00;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(10,10,10,0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255,77,166,0.3);
+        }
+
+        h2 {
+            text-shadow: 0 0 10px #ff7b00;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: none;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        textarea {
+            height: 90px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 25px;
+            background: linear-gradient(90deg, #ff4da6, #ff7b00);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255,77,166,0.5);
+        }
+
+        .event {
+            background: rgba(20,20,20,0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(255,77,166,0.2);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PROTECTION ADMIN -->
+    <script>
+        if (localStorage.getItem("admin") !== "true") {
+            window.location.href = "admin-login.html";
+        }
+    </script>
+
+    <div class="header">
+        <h1>Gestion des événements</h1>
+    </div>
+
+    <div class="container">
+
+        <h2>Créer un événement</h2>
+
+        <label>Titre de l'événement
+            <input type="text" placeholder="Soirée Privée – Paris">
+        </label>
+
+        <label>Date
+            <input type="date">
+        </label>
+
+        <label>Lieu
+            <input type="text" placeholder="Adresse ou nom du lieu">
+        </label>
+
+        <label>Description
+            <textarea placeholder="Décrire l'ambiance, les règles, le dress code..."></textarea>
+        </label>
+
+        <a class="btn" href="#">Créer l'événement</a>
+
+        <h2>Événements existants</h2>
+
+        <!-- Exemple -->
+        <div class="event">
+            <h3 style="color:#ff4da6;">Soirée Privée – Paris</h3>
+            <p><strong>Date :</strong> 12/11/2026</p>
+            <p><strong>Lieu :</strong> Paris 9e</p>
+            <p><strong>Description :</strong> Ambiance chic, dress code noir & or.</p>
+
+            <a class="btn-small btn" href="#">Modifier</a>
+            <a class="btn-small btn" href="#">Supprimer</a>
+        </div>
+
+        <a class="btn" href="admin.html">Retour à l'administration</a>
+
+    </div>
+
+</body>
+</html>
